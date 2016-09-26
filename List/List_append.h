@@ -13,6 +13,7 @@ void List<T>::Append(istream& in)
 			break;
 		}
 		p=p->insertAsSucc(c, e);
+		n++;
 	}
 
 

@@ -5,7 +5,7 @@ void List<T>::Output(ostream& out) const
 	int first = 1;
 	NodePosi(T) p = head->succ;
 	cout << "The polynominal is:\n" << endl;
-	for (; p->succ != tailer; p = p->succ)
+	for (; p != tailer  ; p = p->succ)
 	{
 		if (!first && (p->coef > 0))out << "+";
 		first = 0;

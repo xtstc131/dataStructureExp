@@ -4,9 +4,9 @@ int List<T>::Clear()
 {
 	int oldSize = n;
 	T c, e;
-	while (n>0)
+	while (head->succ!=tailer)
 	{
-		this.Remove(head->succ,c,e);
+		Remove(head->succ,c,e);
 	}
 	return oldSize;
 }

@@ -48,11 +48,16 @@
     <ClInclude Include="List_output.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="List_ostream.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
     <ClInclude Include="List_polyAdd.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="List_polyMul.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

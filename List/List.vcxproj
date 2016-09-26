@@ -116,14 +116,17 @@
     <ClInclude Include="List_clear.h" />
     <ClInclude Include="List_destructor.h" />
     <ClInclude Include="List_implement.h" />
-    <ClInclude Include="List_ostream.h" />
     <ClInclude Include="List_output.h" />
     <ClInclude Include="List_polyAdd.h" />
+    <ClInclude Include="List_polyMul.h" />
     <ClInclude Include="List_remove.h" />
     <ClInclude Include="Node.h" />
     <ClInclude Include="Node_implement.h" />
     <ClInclude Include="Node_pred.h" />
     <ClInclude Include="Node_succ.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

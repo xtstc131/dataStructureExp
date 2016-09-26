@@ -8,7 +8,10 @@ class List
 public:
 	List()
 	{
-		head = nullptr; tailer = nullptr; 
+		head = new Node<T>;
+		tailer = new Node<T>;
+		head->succ = tailer; head->pred = nullptr;
+		tailer->pred = head; tailer->succ = nullptr;
 		n = 0;
 	}
 	~List();
@@ -18,15 +21,21 @@ public:
 	bool Find(int i, T &x)const;
 	int Search(T x)const;
 	bool Insert(NodePosi(T),T x);
-	
-	void Append(istream & in) ;
+	void Remove(NodePosi(T) p, T & c, T & e);
+	void Append(istream & in);
 	bool Delete(int i);
-	void Remove(NodePosi(T) p,T & c,T & e);
-
 	bool Update(int i, T c , T e);
 	int Clear();
-
-	ostream &operator <<(ostream  &out, const Node<T> & val);
+	void Output(ostream &out)const;
+	void PolyAdd(List<T> & r);
+	void PolyMul( const List<T> &r );
+	
+	
+	friend  ostream &operator <<(ostream  &out, const List<T> & val)
+	{
+		val.Output(out);
+		return out;
+	}
 	friend	istream & operator >> (istream & in, List<T> & x)
 	{
 		x.Append(in);
@@ -36,9 +45,13 @@ public:
 	{
 		a.PolyAdd(b);
 		return a;
+
 	}
-	void Output(ostream &out)const;
-	void PolyAdd(List<T> & r);
+	friend List<T> & operator * (List<T> & a , List<T> & b)
+	{
+		 a.PolyMul(b);
+		return a;
+	}
 private:
 	NodePosi(T) head;//头节点
 	NodePosi(T) tailer;//尾节点
