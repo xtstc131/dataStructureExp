@@ -10,11 +10,10 @@ void List<T>::Append(istream& in)
 		cin >> c >> e;
 		if (e <0)
 		{
+			cout << *this;
 			break;
 		}
 		p=p->insertAsSucc(c, e);
 		n++;
 	}
-
-
 }

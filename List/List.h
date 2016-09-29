@@ -30,7 +30,18 @@ public:
 	void PolyAdd(List<T> & r);
 	void PolyMul( const List<T> &r );
 	
-	
+	List<T> & operator =(const List<T>& a)
+	{
+		Clear();
+		NodePosi(T) p = a.head->succ;
+		NodePosi(T) q = head;
+		while (p != a.tailer)
+		{
+			q = q->insertAsSucc(p->coef, p->exp);
+			p = p->succ;
+		}
+		return *this;
+	}
 	friend  ostream &operator <<(ostream  &out, const List<T> & val)
 	{
 		val.Output(out);

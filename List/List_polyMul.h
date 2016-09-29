@@ -17,7 +17,7 @@ void List<T>::PolyMul(const List<T>& r)
 			tHead = tHead->insertAsSucc(tCoef, tExp);
 		//	cout  <<tCoef<<" "<<tExp<<endl;
 			q = q->succ;
-			cout <<"temp:"<<temp;
+			//cout <<"temp:"<<temp;
 		}
 		q = head->succ;
 		mulResult.PolyAdd(temp);
